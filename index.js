@@ -12,6 +12,11 @@ let BrushHandler = new BrushesHandler(Canvas, Field);
 var ForceLinesCountInput = document.getElementById("ForceLinesCountInput");
 var ForceLinesStepInput = document.getElementById("ForceLinesStepInput");
 
+var EqviLinesStepInput = document.getElementById("EqviLinesStepInput");
+var EqviLinesCountInput = document.getElementById("EqviLinesCountInput");
+var EqviLinesMinForceInput = document.getElementById("EqviLinesMinForceInput");
+var EqviLinesMaxForceInput = document.getElementById("EqviLinesMaxForceInput");
+
 var ClearButton = document.getElementById("ClearButton");
 ClearButton.addEventListener('click', function(event)
 {
@@ -29,6 +34,7 @@ PaintButton.addEventListener('click', function(event)
         element.Paint(Canvas);
     });
     Field.ForceLinesPaint(ForceLinesCountInput.value, ForceLinesStepInput.value);
+    Field.EquipotentialLinesPaint(+EqviLinesMinForceInput.value,+EqviLinesMaxForceInput.value,+EqviLinesCountInput.value,+EqviLinesStepInput.value);
 })
 
 var ChargeValueInput = document.getElementById('ChargeValueInput');
