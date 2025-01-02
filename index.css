@@ -1,4 +1,113 @@
-canvas
-{
-    size: 1000px 500px;
+/*Обнуление*/
+* {padding: 0;margin: 0;border: 0;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{height: 100%;width: 100%;font-size: 100%;line-height: 1;font-size: 14px;-ms-text-size-adjust: 100%;-moz-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;}
+input,button,textarea {font-family: inherit;}
+input::-ms-clear {display: none;}
+button {cursor: pointer;background-color: inherit;}
+button::-moz-focus-inner {padding: 0;border: 0;}
+a,a:visited {text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size: inherit;font-weight: 400;}
+/*--------------------*/
+.unselectable {
+  -webkit-touch-callout: none; 
+  -webkit-user-select: none; 
+  -khtml-user-select: none; 
+  -moz-user-select: none; 
+  -ms-user-select: none; 
+  user-select: none; 
+}
+/******************************************************************************************************/
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    width: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    overflow-x: auto;
+    min-height: 100%;
+    min-width: 1280px;
+}
+
+#myCanvas {
+    display: block;
+}
+
+.title {
+    margin-bottom: 50px;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+#myCanvas {
+    border: 1px solid black;
+    grid-area: canvas;
+}
+
+.field {
+    display: grid;
+    grid-template-areas:
+    "options"
+    "canvas"
+    "canv_buttons";
+}
+
+.field-options {
+    grid-area: options;
+    background-color: #86770063;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, .45fr);
+    width: calc(100% + 2px);
+    max-width: 1282px;
+    justify-content: space-between;
+}
+
+.field button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    padding: 5px;
+    grid-area: options;
+}
+
+.field input {
+    border: 1px solid black;
+    padding: 4px;
+    font-size: inherit;
+    background-color: #e4e4e4cd;
+}
+
+.field-option {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.canvas-buttons {
+    grid-area: canv_buttons;
+    justify-self: end;
+    display: inline-flex;
+    font-size: 24px;
+    margin: 0;
+}
+
+.canvas-buttons button {
+    font-size: inherit;
 }

@@ -6,44 +6,45 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <!-- <article>
-            Данный сервис предназначен для моделирования силовых и эквипотенциальных полей заряженных частиц.
-        </article>
-        <div>
-            <button></button>
-        </div> -->
-        <div>
-            <label>Шаг силовых линий:</label>
-            <input type="number" id="ForceLinesStepInput" value="6">
+        <div class="wrapper">
+            <h1 class="title">Моделирование силовых и эквипотенциальных полей заряженных частиц.</h1>
+            <div class="field">
+                <div class="field-options">
+                    <div class="field-option">
+                        <label>Шаг силовых линий:</label>
+                        <input type="number" id="ForceLinesStepInput" value="6">
+                    </div>
+                    <div class="field-option">
+                        <label>Шаг линий равных потенциалов:</label>
+                        <input type="number" id="EqviLinesStepInput" value="20">
+                    </div>
+                    <div class="field-option">
+                        <label>Кол-во силовых линий:</label>
+                        <input type="number" id="ForceLinesCountInput" value="7">
+                    </div>
+                    <div class="field-option">
+                        <label>Кол-во эквипотенциальных линий:</label>
+                        <input type="number" id="EqviLinesCountInput" value="10">
+                    </div>
+                    <div class="field-option">
+                        <label>Диапазон эквипотенциальных линий:</label>
+                        <div>
+                            <input type="number" id="EqviLinesMinForceInput" value="300000">
+                            <input type="number" id="EqviLinesMaxForceInput" value="5600000">
+                        </div>
+                    </div>
+                    <div class="field-option">
+                        <label>Заряд:</label>
+                        <input type="number" id="ChargeValueInput" value="1">
+                    </div>
+                </div>
+                <div class="field-option canvas-buttons">
+                    <button id="ClearButton">Очистить</button>
+                    <button id="PaintButton">Отрисовать</button>
+                </div>
+                <canvas id="myCanvas" width="1280" height="720"></canvas>
             </div>
-        <div>
-            <label>Шаг линий равных потенциалов:</label>
-            <input type="number" id="EqviLinesStepInput" value="20">
-            </div>
-        <div>
-            <label>Кол-во силовых линий:</label>
-            <input type="number" id="ForceLinesCountInput" value="7">
-            </div>
-        <div>
-            <label>Кол-во эквипотенциальных линий:</label>
-            <input type="number" id="EqviLinesCountInput" value="10">
-            </div>
-        <div>
-            <label>Диапазон эквипотенциальных линий:</label>
-            <input type="number" id="EqviLinesMinForceInput" value="300000">
-            <input type="number" id="EqviLinesMaxForceInput" value="5600000">
-            </div>
-        <div>
-        <label>Заряд:</label>
-        <input type="number" id="ChargeValueInput" value="1">
         </div>
-        <div>
-            <button id="ClearButton">Очистить</button>
-            <button id="PaintButton">Отрисовать</button>
-        </div>
-        <canvas id="myCanvas" width="1280" height="720">
-        </canvas>
-        
         <script type="module" src="index.js"></script>
     </body>
 </html>
