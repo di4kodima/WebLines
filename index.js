@@ -34,7 +34,7 @@ PaintButton.addEventListener('click', function(event)
         element.Paint(Canvas);
     });
     Field.ForceLinesPaint(ForceLinesCountInput.value, ForceLinesStepInput.value);
-    Field.EquipotentialLinesPaint(+EqviLinesMinForceInput.value,+EqviLinesMaxForceInput.value,+EqviLinesCountInput.value,+EqviLinesStepInput.value);
+    Field.EquipotentialLinesPaint(+ EqviLinesMinForceInput.value,+ EqviLinesMaxForceInput.value,+ EqviLinesCountInput.value,+ EqviLinesStepInput.value);
 })
 
 var ChargeValueInput = document.getElementById('ChargeValueInput');
