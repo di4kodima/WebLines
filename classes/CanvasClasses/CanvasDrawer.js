@@ -4,10 +4,8 @@ export class CanvasDrawer
     {
         this.context = Canvas.getContext('2d');
 
-        var rect = Canvas.getBoundingClientRect();
-
         this.context.beginPath();
-        this.context.arc( position.X - rect.left, position.Y - rect.top, radius, 0, 2 * Math.PI, false);
+        this.context.arc( position.X, position.Y, radius, 0, 2 * Math.PI, false);
         this.context.fillStyle = color;
         this.context.fill();
         this.context.lineWidth = 2;
@@ -19,11 +17,10 @@ export class CanvasDrawer
     {
         const ctx = canvas.getContext('2d');
 
-        var rect = canvas.getBoundingClientRect();
 
         ctx.beginPath();
-        ctx.moveTo(point1.X- rect.left, point1.Y - rect.top);
-        ctx.lineTo(point2.X- rect.left, point2.Y - rect.top);
+        ctx.moveTo(point1.X, point1.Y);
+        ctx.lineTo(point2.X, point2.Y);
 
         ctx.strokeStyle = color;
         ctx.lineWidth = width;

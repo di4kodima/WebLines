@@ -6,9 +6,14 @@ export class ChargedPointBrush extends Brush
     Canvas;
     Click(event)
     {
+        console.log(this.Canvas);
         let point = new ChargedPoint(this.Charge);
-        point.Position.X = event.clientX;
-        point.Position.Y = event.clientY;
+
+        
+        var rect = this.Canvas.getBoundingClientRect();
+        console.log(rect);
+        point.Position.X = event.clientX - rect.left;
+        point.Position.Y = event.clientY - rect.top;
         point.Charge = this.Charge;
         point.Paint(this.Canvas);
 

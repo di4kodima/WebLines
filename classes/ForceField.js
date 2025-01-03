@@ -76,9 +76,9 @@ export class ForceField
             values.push(MinField + ((MaxField - MinField) / LinesCount * i));
         }
         
-        for (let i = 0; i < 1200 / h; i++)
+        for (let i = 0; i < +this.Canvas.width / h; i++)
         {
-            for (let j = 0; j < 800 / h; j++)
+            for (let j = 0; j < +this.Canvas.height / h; j++)
             {
                 values.forEach(val =>
                 {
